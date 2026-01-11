@@ -9,7 +9,7 @@
   "scripts": {
     "start": "tsx watch dist/server.js",
     "dev": "tsx watch src/server.ts",
-    "build": "rimraf ./dist && tsc",
+    "build": "prisma generate --schema=./prisma/schema.prisma && rimraf ./dist && tsc",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"
